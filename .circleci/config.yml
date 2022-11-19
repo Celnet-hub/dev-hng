@@ -7,7 +7,7 @@ executors:
   docker-publisher: 
     environment:
       IMAGE_NAME_FE: celnet1/salesapp-frontend
-      IMAGE_NAME_BE: celnet1/salesapp-Backend
+      IMAGE_NAME_BE: celnet1/salesapp-backend
     docker: # Each job requires specifying an executor
     # (either docker, macos, or machine), see
       - image: circleci/node:latest
