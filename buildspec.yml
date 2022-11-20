@@ -18,7 +18,7 @@ phases:
   build:
     commands:
     #***** Check test containers before pushing to building prod
-      # - echo Build started on `date`
+      - echo Build started on `date`
       # # Run tests with built Docker images
       # - echo Run react tests...
       # - docker run -e CI=true celnet1/salesapp-fe-test
@@ -38,16 +38,16 @@ phases:
       ## Setup continuous monitoring
       # - ./snyk monitor --docker lukondefmwila/nodejs-test:latest --file=./backend/Dockerfile.dev
       # Build the Docker images
-      - echo Building the production Docker image...
-      - docker build -t celnet1/salesapp-frontend ./frontend
-      - docker build -t celnet1/salesapp-backend ./Backend
-      - docker build -t celnet1/salesapp-nginx ./nginx
-      # Log in to the Docker CLI
-      - echo "$DOCKER_PW" | docker login -u "$DOCKER_ID" --password-stdin
-  post_build:
-    commands:
-      # Take these images and push them to Docker hub
-      - echo Pushing the Docker images...
-      - docker push celnet1/salesapp-frontend
-      - docker push celnet1/salesapp-backend
-      - docker push celnet1/salesapp-nginx
+  #     - echo Building the production Docker image...
+  #     - docker build -t celnet1/salesapp-frontend ./frontend
+  #     - docker build -t celnet1/salesapp-backend ./Backend
+  #     - docker build -t celnet1/salesapp-nginx ./nginx
+  #     # Log in to the Docker CLI
+  #     - echo "$DOCKER_PW" | docker login -u "$DOCKER_ID" --password-stdin
+  # post_build:
+  #   commands:
+  #     # Take these images and push them to Docker hub
+  #     - echo Pushing the Docker images...
+  #     - docker push celnet1/salesapp-frontend
+  #     - docker push celnet1/salesapp-backend
+  #     - docker push celnet1/salesapp-nginx
