@@ -1,8 +1,11 @@
 # syntax=docker/dockerfile:1
 # This image is based on the popular Alpine Linux project, available in the alpine official image. Alpine Linux is much smaller than most distribution base images (~5MB), and thus leads to much slimmer images in general.
-ARG NODE_IMAGE_VERSION=19-alpine3.15
-FROM node:current-alpine
-ENV NODE_ENV=production
+
+# this file is a multi-stage build fille
+
+
+FROM node:19-alpine3.15 as build
+
 LABEL name='Chidubem' email='dubemnwabuisi@gmail.com'
 
 # Create a working directory for Docker to use
@@ -13,8 +16,11 @@ COPY package*.json ./
 
 # Install app dependencies
 RUN yarn install --production
-
-# Bundle app source
 COPY . .
-CMD ["yarn", "start"]
+RUN yarn build
+
+# second stage
+FROM nginx 
 EXPOSE 3000
+COPY ./nginx/default.conf /etc/nginx/conf.d/default.conf
+COPY --from=build /app/build /usr/share/nginx/html
