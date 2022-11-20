@@ -13,8 +13,8 @@ phases:
       # - ./snyk config set api="$SNYK_AUTH_TOKEN"
       # Build Docker image for testing
       - echo Build client and backend docker images for testing...
-      - docker build -t celnet1/salesapp-fe-test -f ./frontend/Dockerfile.dev ./client
-      - docker build -t celnet1/salesapp-be-test -f ./Backend/Dockerfile.dev ./backend
+      - docker build -t celnet1/salesapp-fe-test -f ./frontend/Dockerfile.dev ./frontend
+      - docker build -t celnet1/salesapp-be-test -f ./Backend/Dockerfile.dev ./Backend
   build:
     commands:
       - echo Build started on `date`
