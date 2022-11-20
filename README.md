@@ -8,6 +8,6 @@
 
 
 Pull Docker images from Dockerhub
-- `docker pull celnet1\salesapp-nginx`
+- `docker pull celnet1/salesapp-nginx`
 - `docker pull celnet1/salesapp-backend`
 - `docker pull celnet1/salesapp-frontend`
