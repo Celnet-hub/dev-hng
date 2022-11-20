@@ -6,3 +6,8 @@
 
 ## (Used AWS Codebuild and AWS Pipelines)
 
+
+Pull Docker images from Dockerhub
+`celnet1\salesapp-nginx`
+`celnet1/salesapp-backend`
+`celnet1/salesapp-frontend`
