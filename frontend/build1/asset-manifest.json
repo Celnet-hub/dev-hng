@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/static/css/main.3efa125b.css",
+    "main.js": "/static/js/main.a4124f6b.js",
+    "static/js/787.cda612ba.chunk.js": "/static/js/787.cda612ba.chunk.js",
+    "static/media/landingpage__cutting.png": "/static/media/landingpage__cutting.9ba316d73ce8cb6d7a66.png",
+    "static/media/Help.png": "/static/media/Help.0ed6745758a89945c1f0.png",
+    "static/media/Contact.png": "/static/media/Contact.ab36b45eb25ef736a73f.png",
+    "static/media/what_our_users_are_saying.png": "/static/media/what_our_users_are_saying.c1e8cbe8bbaf2c18fcd3.png",
+    "static/media/landingpage__header.png": "/static/media/landingpage__header.ff7443878e730b0d5278.png",
+    "static/media/Blogs.png": "/static/media/Blogs.08350e7b8316b943743d.png",
+    "static/media/landingpage_company_img.png": "/static/media/landingpage_company_img.8b01542365c9599ee883.png",
+    "static/media/landingpage__iphone.png": "/static/media/landingpage__iphone.1764bfdb4ab959fe428f.png",
+    "static/media/mobile_dashboard.png": "/static/media/mobile_dashboard.4b0205491b6cda0f5984.png",
+    "static/media/Privacy.png": "/static/media/Privacy.fd10d6eaf8249ce63a85.png",
+    "static/media/landingpage__intouch.png": "/static/media/landingpage__intouch.f22a2bc5459da8e7534b.png",
+    "static/media/mobile_company.png": "/static/media/mobile_company.4e92b2165247e01c1f67.png",
+    "static/media/Capa 1.png": "/static/media/Capa 1.56675b707af4da1c5719.png",
+    "index.html": "/index.html",
+    "static/media/arrowright.svg": "/static/media/arrowright.85c87f8b014c2d4b58f3f4a3e6aea3a6.svg",
+    "main.3efa125b.css.map": "/static/css/main.3efa125b.css.map",
+    "main.a4124f6b.js.map": "/static/js/main.a4124f6b.js.map",
+    "787.cda612ba.chunk.js.map": "/static/js/787.cda612ba.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3efa125b.css",
+    "static/js/main.a4124f6b.js"
+  ]
+}
