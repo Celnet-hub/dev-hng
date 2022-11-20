@@ -17,7 +17,7 @@ COPY package*.json ./
 # Install app dependencies
 RUN npm install
 COPY . .
-CMD ["npm", "run", "test"]
+CMD npm run build
 
 # second stage
 FROM nginx 
