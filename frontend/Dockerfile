@@ -4,7 +4,7 @@
 # this file is a multi-stage build fille
 
 
-FROM node:19-alpine3.15 as build
+FROM node:12.13.0-alpine AS build
 
 LABEL name='Chidubem' email='dubemnwabuisi@gmail.com'
 
@@ -15,9 +15,9 @@ WORKDIR /app
 COPY package*.json ./
 
 # Install app dependencies
-RUN yarn install --production
+RUN npm install
 COPY . .
-RUN yarn build
+CMD ["npm", "run", "test"]
 
 # second stage
 FROM nginx 

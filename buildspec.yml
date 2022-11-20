@@ -1,16 +1,7 @@
 version: 0.2
 phases:
-  # install:
-  #   runtime-versions:
-  #     docker: 18
   pre_build:
     commands:
-      # Install Snyk
-      - echo Install Snyk
-      - curl -Lo ./snyk "https://github.com/snyk/snyk/releases/download/v1.210.0/snyk-linux"
-      - chmod -R +x ./snyk
-      # Snyk auth
-      # - ./snyk config set api="$SNYK_AUTH_TOKEN"
       # Build Docker image for testing
       - echo Build client and backend docker images for testing...
       - docker build -t celnet1/salesapp-fe-test -f ./frontend/Dockerfile.dev ./frontend
@@ -18,25 +9,13 @@ phases:
   build:
     commands:
     #***** Check test containers before pushing to building prod
-      # - echo Build started on `date`
+      - echo Build started on `date`
       # # Run tests with built Docker images
-      # - echo Run react tests...
-      # - docker run -e CI=true celnet1/salesapp-fe-test
-      # - echo Run fastapi tests...
-      # - docker run -e CI=true celnet1/salesapp-be-test
+      - echo Run react tests...
+      - docker run -e CI=true celnet1/salesapp-fe-test
+      - echo Run fastapi tests...
+      - docker run -e CI=true celnet1/salesapp-be-test
 
-
-      # Scan Docker image with Snyk
-      ## Client
-      ## Run test for security vulernabilities
-      # - ./snyk test --severity-threshold=medium --docker lukondefmwila/react-test:latest --file=./client/Dockerfile.dev
-      ## Setup continuous monitoring
-      # - ./snyk monitor --docker lukondefmwila/react-test:latest --file=./client/Dockerfile.dev
-      ## Backend
-      ## Run test for security vulernabilities
-      # - ./snyk test --severity-threshold=medium --docker lukondefmwila/nodejs-test:latest --file=./backend/Dockerfile.dev
-      ## Setup continuous monitoring
-      # - ./snyk monitor --docker lukondefmwila/nodejs-test:latest --file=./backend/Dockerfile.dev
       # Build the Docker images
       - echo Building the production Docker image...
       - docker build -t celnet1/salesapp-frontend ./frontend
