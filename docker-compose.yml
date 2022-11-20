@@ -7,7 +7,7 @@ services:
       context: ./nginx
       dockerfile: Dockerfile
     ports:
-      - "81:80"
+      - "80:80"
   
   #Backend Config
   backend:
@@ -21,10 +21,10 @@ services:
       DB_USER: postgres
       DB_PASSWORD: postgres
       DB_NAME: postgres
-    ports:
-      - "8001:8001"
-    # depends_on:
-    #   - db
+    # ports:
+    #   - "8001:8001"
+    # # depends_on:
+    # #   - db
 
   #frontend
   frontend:
@@ -34,9 +34,9 @@ services:
     container_name: client
     # networks:
     #   - appnet
-    # restart: always
-    ports:
-      - "3001:3000"
+    # # restart: always
+    # ports:
+    #   - "3000:3000"
 
   # database  
   db:
